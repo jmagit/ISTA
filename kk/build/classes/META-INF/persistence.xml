@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="kk">
+		<class>com.ista.demo.model.Actor</class>
+		<class>com.ista.demo.model.Address</class>
+		<class>com.ista.demo.model.Category</class>
+		<class>com.ista.demo.model.City</class>
+		<class>com.ista.demo.model.Country</class>
+		<class>com.ista.demo.model.Customer</class>
+		<class>com.ista.demo.model.Film</class>
+		<class>com.ista.demo.model.FilmActor</class>
+		<class>com.ista.demo.model.FilmActorPK</class>
+		<class>com.ista.demo.model.FilmCategory</class>
+		<class>com.ista.demo.model.FilmCategoryPK</class>
+		<class>com.ista.demo.model.FilmText</class>
+		<class>com.ista.demo.model.Inventory</class>
+		<class>com.ista.demo.model.Language</class>
+		<class>com.ista.demo.model.Payment</class>
+		<class>com.ista.demo.model.Rental</class>
+		<class>com.ista.demo.model.Staff</class>
+		<class>com.ista.demo.model.Store</class>
+	</persistence-unit>
+</persistence>
