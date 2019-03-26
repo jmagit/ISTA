@@ -1,16 +1,14 @@
 package com.ista.demo.ioc;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
 //@Component
-//@Qualifier("2D")
-//@Scope("prototype") 
+//@Qualifier("3D")
 @Data
-public class PuntoImpl implements Punto {
-	private int x = 1, y = 2;
+public class Punto3D implements Punto {
+	private int x = 1, y = 2, z = 3;
 
 }
