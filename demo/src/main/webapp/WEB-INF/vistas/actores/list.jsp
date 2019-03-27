@@ -18,23 +18,23 @@
 			</td>
 		</tr>
 	</c:forEach>
-</tabla>
+</table>
 <ul class="pagination">
   	<c:if test = "${listado.hasPrevious()}">
 	    <li class="page-item">
-	    	<a class="page-link" href="${pageContext.request.contextPath}/empleados?page=${listado.getNumber()-1}">
+	    	<a class="page-link" href="${pageContext.request.contextPath}/actores?page=${listado.getNumber()-1}">
 	    		<span aria-hidden="true">&laquo;</span>
 	    	</a>
 	    </li>
 	</c:if>
 	<c:forEach var = "i" begin = "0" end = "${listado.getTotalPages() -1}">
     	<li class="page-item<c:if test = "${i==listado.getNumber()}"> active</c:if>">
-    		<a class="page-link" href="${pageContext.request.contextPath}/empleados?page=${i}">${i + 1}</a>
+    		<a class="page-link" href="${pageContext.request.contextPath}/actores?page=${i}">${i + 1}</a>
     	</li>
 	</c:forEach>
   	<c:if test = "${listado.hasNext()}">
 	    <li class="page-item">
-	    	<a class="page-link" href="${pageContext.request.contextPath}/empleados?page=${listado.getNumber()+1}">
+	    	<a class="page-link" href="${pageContext.request.contextPath}/actores?page=${listado.getNumber()+1}">
 	    		<span aria-hidden="true">&raquo;</span>
 	    	</a>
 	    </li>
