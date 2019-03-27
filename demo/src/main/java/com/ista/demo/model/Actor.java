@@ -2,6 +2,10 @@ package com.ista.demo.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.Size;
+
+import org.springframework.lang.NonNull;
+
 import java.util.Date;
 import java.util.List;
 
@@ -17,12 +21,17 @@ public class Actor implements Serializable {
 
 	@Id
 	@Column(name="ACTOR_ID")
+	@NonNull
 	private long actorId;
 
 	@Column(name="FIRST_NAME")
+	@NonNull
+	@Size(min=2, max=45)
 	private String firstName;
 
 	@Column(name="LAST_NAME")
+	@NonNull
+	@Size(max=45)
 	private String lastName;
 
 	@Temporal(TemporalType.DATE)
