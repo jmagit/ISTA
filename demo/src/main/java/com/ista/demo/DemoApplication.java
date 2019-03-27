@@ -28,21 +28,21 @@ public class DemoApplication implements CommandLineRunner {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@Autowired
-//	@Qualifier("2D")
-	private Punto punto;
-	@Autowired
-//	@Qualifier("3D")
-	private Punto punto2;
-	
-	@Autowired
-	Linea linea;
-	
-	@Value("${spring.datasource.username}") 
-	private String name;
-
-	@Autowired
-	private CityRepository dao;
+//	@Autowired
+////	@Qualifier("2D")
+//	private Punto punto;
+//	@Autowired
+////	@Qualifier("3D")
+//	private Punto punto2;
+//	
+//	@Autowired
+//	Linea linea;
+//	
+//	@Value("${spring.datasource.username}") 
+//	private String name;
+//
+//	@Autowired
+//	private CityRepository dao;
 	
 	@Override
 	@Transactional
@@ -60,10 +60,10 @@ public class DemoApplication implements CommandLineRunner {
 ////			for(Address dir: item.getAddresses())
 ////				System.out.println("\t" + dir.getAddress());
 //		}
-		for (CityDTO dto : dao.findByCityIdLessThanOrderByCityDesc(44)
-				.stream().map(ele -> CityDTO.form(ele)).collect(Collectors.toList())) {
-			System.out.println(dto.getCityId() + "-" + dto.getCity() + " (" + dto.getCountryId() + ")");
-		}
+//		for (CityDTO dto : dao.findByCityIdLessThanOrderByCityDesc(44)
+//				.stream().map(ele -> CityDTO.form(ele)).collect(Collectors.toList())) {
+//			System.out.println(dto.getCityId() + "-" + dto.getCity() + " (" + dto.getCountryId() + ")");
+//		}
 	}
 
 }
