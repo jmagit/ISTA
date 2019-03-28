@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.lang.NonNull;
 
 import java.util.Date;
@@ -31,11 +33,12 @@ public class Actor implements Serializable {
 
 	@Column(name="LAST_NAME")
 	@NonNull
-	@Size(max=45)
+	@Size(min=2, max=45)
 	private String lastName;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="LAST_UPDATE")
+	@DateTimeFormat(iso=ISO.DATE)
 	private Date lastUpdate;
 
 	//bi-directional many-to-one association to FilmActor
