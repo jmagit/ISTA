@@ -2,6 +2,7 @@ package com.ista.demo.dtos;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
@@ -21,7 +22,8 @@ public class CityDTO implements Serializable {
 	@Size(min=1, max=50)
 	private String city;
 	//private List<Address> addresses;
-	private long countryId;
+	@Min(value=1, message="Es obligatorio")
+	private long countryId = -1;
 	
 	public static CityDTO form(City source) {
 		return new CityDTO(

@@ -23,7 +23,14 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="/actores">Actores</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/ciudades">Ciudades</a>
+	      </li>
 	    </ul>
+		<div class="btn-group btn-group-sm float-right">
+			<a href="?lang=es" class="btn btn-primary btn-sm">ES</a>
+			<a href="?lang=en" class="btn btn-primary btn-sm">EN</a>
+		</div>
 	  </div>
 	</nav>
 	<div class="container-fluid">
