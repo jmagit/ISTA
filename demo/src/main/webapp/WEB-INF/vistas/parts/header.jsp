@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,5 +36,12 @@
 			<a href="?lang=en" class="btn btn-primary btn-sm">EN</a>
 		</div>
 	  </div>
+	   	<sec:authorize access="isAnonymous()">
+	  		<a class="nav-link" href="${pageContext.request.contextPath}/mylogin">Log In</a>
+		</sec:authorize>
+	  	<sec:authorize access="isAuthenticated()">
+	  		<sec:authentication property="principal.username" />
+	  		<a class="nav-link" href="${pageContext.request.contextPath}/logout">Log Out</a>
+		</sec:authorize>
 	</nav>
 	<div class="container-fluid">

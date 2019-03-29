@@ -4,6 +4,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.Ordered;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -46,6 +47,8 @@ public class AppMvcConfig implements WebMvcConfigurer {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) { 
 		registry.addViewController("/home").setViewName("home"); 
+		registry.addViewController("/mylogin").setViewName("mylogin");
+		registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
 
 }

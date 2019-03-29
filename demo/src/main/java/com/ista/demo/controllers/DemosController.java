@@ -3,6 +3,7 @@ package com.ista.demo.controllers;
 import javax.servlet.ServletRequest;
 
 import org.springframework.core.type.filter.RegexPatternTypeFilter;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,7 @@ public class DemosController {
 		return mv;
 	}
 	@RequestMapping(path="/ajax")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String demoAjax() {
 		return "demoAjax";
 	}
