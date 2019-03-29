@@ -68,7 +68,7 @@ public class CiudadesController {
 			BindingResult result, Locale locale) {
 		ModelAndView mv = new ModelAndView();
 		if(dao.findById(item.getCityId()).isPresent())
-			result.addError(new FieldError("elemento", "actorId", ms.getMessage("errormsg.clave.duplicada", null, locale)));
+			result.addError(new FieldError("elemento", "cityId", ms.getMessage("errormsg.clave.duplicada", null, locale)));
 		if(result.hasErrors()) {
 			mv.addObject("modo", "add");
 			mv.addObject("action", "ciudades/add");

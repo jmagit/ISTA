@@ -28,6 +28,7 @@
 	<div class="form-group">
 		<input type="submit" value="<s:message code="form.enviar" />" class="btn btn-primary">
 		<a href="/ciudades" class="btn btn-primary" ><s:message code="form.volver" /></a>
+		<input value="kk">
 	</div>
 </sf:form>
 <%@ include file="../parts/footer.jsp" %>

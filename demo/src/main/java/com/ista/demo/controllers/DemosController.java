@@ -32,4 +32,8 @@ public class DemosController {
 		mv.setViewName("saludar");
 		return mv;
 	}
+	@RequestMapping(path="/ajax")
+	public String demoAjax() {
+		return "demoAjax";
+	}
 }

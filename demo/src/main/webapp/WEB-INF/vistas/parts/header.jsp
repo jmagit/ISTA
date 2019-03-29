@@ -26,6 +26,9 @@
 	      <li class="nav-item">
 	        <a class="nav-link" href="/ciudades">Ciudades</a>
 	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/ajax">Ajax</a>
+	      </li>
 	    </ul>
 		<div class="btn-group btn-group-sm float-right">
 			<a href="?lang=es" class="btn btn-primary btn-sm">ES</a>
